@@ -13,6 +13,9 @@ wget -qO- https://raw.githubusercontent.com/calidion/chinese-noder-the-easy-way/
 
 ```
 
+如果你了安装过程不是很了解，可以详细查看下面的安装过程，如果你对安装过程非常熟悉。直接用上面的脚本运行代码安装即可。
+
+
 # 详细分步骤安装
 
 ## 1. 安装nvm
