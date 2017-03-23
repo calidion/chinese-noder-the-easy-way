@@ -1,6 +1,20 @@
 # chinese-noder-the-easy-way
 对于中国的开发者来说，快速搭建一个开发环境的指导及脚本（基于Linux，测试平台Ubuntu）
 
+
+# 一次性脚本安装
+
+```
+curl -o- https://raw.githubusercontent.com/calidion/chinese-noder-the-easy-way/master/install.sh | bash
+```
+或者
+```
+wget -qO- https://raw.githubusercontent.com/calidion/chinese-noder-the-easy-way/master/install.sh | bash
+
+```
+
+# 详细分步骤安装
+
 ## 1. 安装nvm
 
 
@@ -128,29 +142,34 @@ nvm ls-remote
 export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node  
 
 # 加入启动脚本上
-
 echo 'export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node' >> ~/.profile   
 ```
+
 这时我们执行
+
 ```bash
 nvm ls-remote
-
-```就可以得到正常的结果了。
+```
+就可以得到正常的结果了。
 选择一个适合的版本安装即可。比如6
 
 ```bash
 nvm install 6
 ```
+
 这时候node6的是高版本就会被安装。如果你想安装6的指定版本，可以这样安装：
 
 ```bash
 nvm install v6.10.1
 ```
+
 这时我们执行，
+
 
 ```bash
 nvm use v6.10.1
 ```
+
 
 就可以进入到v6.10.1的环境里了。
 这时打入node，应该就会进入node的REPL环境了。
@@ -160,6 +179,7 @@ nvm use v6.10.1
 如果这个时候你执行<code>npm install</code>，你会发现非常慢。
 这时你需要创建一个<code>~/.npmrc</code>文件. 
 并输入如下的内容： 
+
 ```
 registry=http://r.cnpmjs.org/
 ```
