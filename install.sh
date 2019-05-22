@@ -1,15 +1,15 @@
 # 
 
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  
 export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node  
 echo 'export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node' >> ~/.profile   
 
-nvm install 8
 nvm install 10
-nvm alias default 8
+nvm install 12
+nvm alias default 10
 touch ~/.npmrc
 echo 'registry=http://r.cnpmjs.org/' >> ~/.npmrc
 nvm use 8
